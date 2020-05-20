@@ -1,0 +1,224 @@
+.title {
+    color: blueviolet;
+    text-align: center;
+}
+
+.end {
+    text-align: center;
+    animation: fadeMe 3s infinite linear;
+}
+
+.container {
+    text-align: center;
+    border: 5px dashed gray;
+    margin: 20px;
+    padding: 20px;
+}
+
+.box {
+    background-color: gray;
+    margin: 20px;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+}
+
+nav {
+    background-color: hotpink;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    padding: 10px;
+}
+
+.circle-img {
+    border-radius: 20%;
+}
+
+img {
+    box-shadow: 8px 8px 10px gray;
+}
+
+.flex {
+    margin: 30px;
+    padding: 20px;
+    display: flex;
+    border: solid black;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+@keyframes changeColor {
+    0%{background-color: blue;}
+    25%{background-color: green;}
+    50%{background-color: yellow;}
+    75%{background-color: gray;}
+    100%{background-color: blue;}
+
+}
+
+@keyframes moveBox {
+    0% {left:0px; top:0px;}
+    25% {left:100px; top:0px;}
+    50% {left:100px; top:100px;}
+    75% {left:0px; top:100px;}
+    100% {left:0px; top:0px;}
+}
+
+@keyframes getBigger {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeMe {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes rotate {
+    0%{transform: rotate(0deg);}
+    50%{transform: rotate(180deg);}
+    100%{transform: rotate(360deg);}
+}
+
+#box5{
+    position: relative;
+    background-color: hotpink;
+    animation: moveBox 5s infinite ease-in-out;
+    border-radius: 100%;
+}
+
+#box4{
+    animation: changeColor 4s infinite linear;
+    border-radius: 20%;
+
+}
+
+#box3 {
+    animation: getBigger 3s infinite ease-in;
+    border-radius: 50%;
+    background-image: linear-gradient(green, orange, yellow);
+}
+
+#box2 {
+    animation-name: rotate;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    border-radius: 20%;
+    background-image: radial-gradient(purple, yellow, orange, pink);
+}
+
+#box1 {
+    animation-name: fadeMe;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+/* 
+html {
+    background-image: radial-gradient(yellow,green,pink,orange,yellow);
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+form input, textarea, button {
+    display: block;
+    margin: 20px;
+}
+
+.nav-wrapper {
+    background: blue;
+}
+
+.contact-box {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(5, [col] 20% ) ;
+    grid-template-rows: repeat(3, [row] auto  );
+    background-color: #fff;
+    color: yellow;
+}
+
+.Box {
+    background-color: yellow;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+    z-index:10;
+
+}
+
+.a {
+    grid-column: col / span  2;
+    grid-row: row ;
+    display: flex;
+    justify-content: center;
+}
+.b {
+    grid-column: col 4 / span  2 ;
+    grid-row: row ;
+    display: flex;
+    justify-content: center;
+}
+.c {
+    grid-column: col 2;
+    grid-row: row 2 ;
+    display: flex;
+    justify-content: center;
+}
+.d {
+    grid-column: col 4 / span  2 ;
+    grid-row: row 2 ;
+    display: flex;
+    justify-content: center;
+}
+
+.e {
+    grid-column: col / span  2;
+    grid-row: row 3;
+    display: flex;
+    justify-content: center;
+}
+
+.f {
+    grid-column: col 4 / span 2;
+    grid-row: row 3  ;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(49,121,207, 0.5);
+    z-index: 20;
+}
+
+
+
